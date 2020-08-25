@@ -1,0 +1,154 @@
+/*
+  GLOBAL
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* 
+  UTILITIES
+*/
+.fw-bold {
+  font-weight: bold;
+}
+
+/* 
+  COMPONENT
+*/
+
+.fakeimg {
+  background: #aaa;
+  padding: 20px;
+  width: 100%;
+}
+
+/* 
+  LAYOUT
+*/
+.grid-container {
+  display: grid;
+  grid-template-areas: 'header header header header header header'
+    'post-1 post-1 post-1 post-1 post-1 about-me'
+    'post-1 post-1 post-1 post-1 post-1 popular-post'
+    'post-2 post-2 post-2 post-2 post-2 popular-post'
+    'post-2 post-2 post-2 post-2 post-2 follow-me'
+    'post-2 post-2 post-2 post-2 post-2 .'
+    'footer footer footer footer footer footer';
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* 
+  HEADER
+*/
+.header {
+  grid-area: header;
+  background: #fff;
+}
+
+.banner {
+  text-align: center;
+  padding: 30px;
+}
+
+.banner>h1 {
+  font-size: 3em;
+}
+
+.navbar {
+  background: #000;
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr auto;
+  justify-items: left;
+}
+
+.nav-link {
+  padding: 14px 16px;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background: #f2f2f2;
+  color: #000;
+}
+
+/* 
+  ARTICLE
+*/
+.post-1 {
+  grid-area: post-1;
+}
+
+.post-2 {
+  grid-area: post-2;
+}
+
+.post-1,
+.post-2 {
+  background: #fff;
+  padding: 20px;
+}
+
+/* 
+  ASIDE
+*/
+.about-me {
+  grid-area: about-me;
+}
+
+.popular-post {
+  grid-area: popular-post;
+}
+
+.follow-me {
+  grid-area: follow-me;
+}
+
+.about-me,
+.popular-post,
+.follow-me {
+  background: #fff;
+  padding: 20px;
+}
+
+/* 
+  FOOTER
+*/
+.footer {
+  grid-area: footer;
+  background: #ddd;
+  text-align: center;
+  padding: 1em;
+}
+
+/* 
+  RESPONSIVE
+*/
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-areas: 'header''post-1''post-2''about-me'' popular-post''follow-me''footer';
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+}

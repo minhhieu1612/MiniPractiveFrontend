@@ -1,0 +1,156 @@
+/* 
+  GLOBAL
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* 
+  UTILITIES
+*/
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.bg-white {
+  background: white;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* 
+  COMPONENT
+*/
+
+.fakeimg {
+  background: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 
+  PAGE
+*/
+
+
+/* 
+  HEADER
+*/
+.banner {
+  padding: 30px;
+  text-align: center;
+}
+
+.banner>h1 {
+  font-size: 3em;
+}
+
+.navbar {
+  background: #000;
+}
+
+.navbar::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.nav-link {
+  padding: 14px 16px;
+  color: #f2f2f2;
+  float: left;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background: #ddd;
+  color: #000;
+}
+
+.nav-link-right {
+  float: right;
+}
+
+.float-container::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* 
+  POST
+*/
+.float-container>article {
+  float: left;
+  width: 70%;
+  margin-right: 20px;
+}
+
+/* 
+  ASIDE
+*/
+.float-container>aside {
+  float: left;
+  width: calc(30% - 20px);
+}
+
+/* 
+  FOOTER
+*/
+
+.footer {
+  text-align: center;
+  background: #ddd;
+}
+
+@media (max-width: 800px) {
+
+  .float-container>article,
+  .float-container>aside {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (max-width: 400px) {
+  [class*='nav-link'] {
+    width: 100%;
+  }
+}

@@ -1,0 +1,138 @@
+/* 
+  GLOBAL
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* 
+  UTILTIES
+*/
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-white {
+  background: white;
+}
+
+/* 
+  COMPONENT
+*/
+
+.fakeimg {
+  background: #aaa;
+  padding: 20px;
+}
+
+/* 
+  PAGE
+*/
+
+/* 
+  HEADER
+*/
+
+.banner {
+  padding: 30px;
+}
+
+.banner>h1 {
+  font-size: 3em;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #f2f2f2;
+  padding: 14px 16px;
+}
+
+.nav-link:hover {
+  color: #000;
+  background-color: #ddd;
+}
+
+.nav-link-right {
+  margin-left: auto;
+}
+
+/* 
+  MAIN
+*/
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  width: 70%;
+}
+
+.introduce {
+  width: calc(30% - 20px);
+  margin-left: 20px;
+}
+
+/* 
+  FOOTER
+*/
+
+.footer {
+  background: #ddd;
+}
+
+/* 
+  RESPONSIVE
+*/
+
+@media (max-width: 800px) {
+
+  .content,
+  .introduce {
+    width: 100%;
+  }
+
+  .introduce {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,10 @@
+- Dropdown
+- Navbar
+- Modal
+- Collapse
+- Progress Bar
+- Breadcrumb
+- Carousel 
+- Pagination
+- Scrollspy
+- Parallax

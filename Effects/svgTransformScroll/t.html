@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Transform When Scroll</title>
+  <link rel="stylesheet" href="t.css">
+</head>
+
+<body>
+  <div class="banner">
+    <video autoplay="" muted="" loop="">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="bg"></div>
+    <div class="scroll-see-more">
+      Scroll to see more &#8594;
+    </div>
+  </div>
+  <main class="main">
+    <h1>Move Backgorund on Scroll</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+  </main>
+  <script>
+    window.onscroll = function () {
+      var scrollY = window.scrollY;
+      var scrollTop = document.documentElement.scrollHeight - window.innerHeight;
+
+      document.querySelector('.bg').style.backgroundSize = 100 + 2 * scrollY + 'px';
+      if (scrollY > scrollTop * 0.3) {
+        document.querySelector('.scroll-see-more').style.display = 'none';
+      } else {
+        document.querySelector('.scroll-see-more').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>

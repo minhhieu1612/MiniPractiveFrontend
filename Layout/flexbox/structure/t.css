@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+.banner {
+  background: chartreuse;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+  border: 1px solid slateblue;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  background: #ccc;
+  width: 30%;
+  padding: 2em;
+  /* float: left; */
+}
+
+article {
+  width: 70%;
+  padding: 2em;
+  /* float: left; */
+}
+
+@media (max-width: 767px) {
+
+  nav,
+  article {
+    width: 100%;
+  }
+}
+
+header,
+footer {
+  text-align: center;
+  font-size: 2em;
+  background: #999;
+  color: #fff;
+  padding: 1.5em;
+  border: 1px solid slateblue;
+}

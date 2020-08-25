@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.breadcrumb {
+  list-style: none;
+  background: #eee;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  padding: 1em;
+  position: relative;
+}
+
+.breadcrumb li::after {
+  content: '/';
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.breadcrumb li:last-child::after {
+  content: '';
+}

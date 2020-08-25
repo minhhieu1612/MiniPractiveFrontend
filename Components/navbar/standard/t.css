@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  height: 200vh;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  font-size: 1.15em;
+}
+
+.header {
+  background: #333;
+  position: fixed;
+  transition: .4s;
+  width: 100%;
+  top: 0px;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.nav-link {
+  float: left;
+  padding: 0.75em 1.25em;
+  font-size: 1.5em;
+  transition: .4s;
+}
+
+.navbar-menu>.nav-link:hover {
+  color: #333;
+  background-color: #eee;
+}
+
+.logo {
+  background: green;
+}
+
+/* .logo:hover {
+  color: green;
+  background-color: #eee;
+} */
+
+.navbar-toggler {
+  float: right;
+  padding: 1em 0.5em;
+  display: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  margin: 5px;
+  transition: .4s;
+}
+
+.navbar-toggler:focus>.bar:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.navbar-toggler:focus>.bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:focus>.bar:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-toggler {
+    display: inline-block;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-menu>.nav-link {
+    left: -100%;
+    position: relative;
+    background: #333;
+  }
+
+  .navbar-menu>.nav-link:nth-child(1) {
+    transition: .4s;
+  }
+
+  .navbar-menu>.nav-link:nth-child(2) {
+    transition: .6s;
+  }
+
+  .navbar-menu>.nav-link:nth-child(3) {
+    transition: .8s;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    /* top: -7em; */
+    top: 100%;
+    left: 0%;
+    transition: .4s;
+    z-index: -1;
+    width: 100%;
+    /* opacity: 0; */
+  }
+
+  .logo {
+    width: calc(100% - 51px);
+    display: block;
+  }
+
+  .navbar-toggler:focus+.navbar-menu {
+    /* display: block; */
+    /* opacity: 1; */
+    /* top: 100%; */
+    /* left: 0%; */
+    z-index: 1;
+    bottom: unset;
+  }
+
+  .navbar-toggler:focus+.navbar-menu>.nav-link {
+    left: 0%;
+  }
+}

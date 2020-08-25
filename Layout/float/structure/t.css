@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+.banner {
+  background: chartreuse;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+  border: 1px solid slateblue;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.content::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.content nav,
+.content article {
+  float: left;
+}
+
+nav {
+  width: 30%;
+  padding: 2em;
+  background: #ccc;
+  /* float: left; */
+  padding-bottom: 10em;
+  margin-bottom: -10em;
+}
+
+article {
+  width: 70%;
+  padding: 2em;
+  /* float: left; */
+}
+
+@media (max-width: 767px) {
+
+  nav {
+    width: 100%;
+    padding-bottom: 2em;
+    margin-bottom: 0em;
+  }
+
+  article {
+    width: 100%;
+  }
+}
+
+header,
+footer {
+  font-size: 2em;
+  background: #999;
+  color: #fff;
+  padding: 1.5em;
+  border: 1px solid slateblue;
+}

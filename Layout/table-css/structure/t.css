@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+.banner {
+  background: chartreuse;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+  border: 1px solid slateblue;
+}
+
+.content {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 7px;
+  border: 1px solid saddlebrown;
+}
+
+nav {
+  width: 30%;
+  padding: 2em;
+  background: #ccc;
+  display: table-cell;
+  border: 1px solid saddlebrown;
+}
+
+article {
+  width: 70%;
+  padding: 2em;
+  display: table-cell;
+  border: 1px solid saddlebrown;
+}
+
+@media (max-width: 767px) {
+
+  .content {
+    display: block;
+    border: 0;
+  }
+
+  nav,
+  article {
+    display: block;
+    width: 100%;
+  }
+}
+
+header,
+footer {
+  font-size: 2em;
+  background: #999;
+  color: #fff;
+  padding: 1.5em;
+  border: 1px solid slateblue;
+}

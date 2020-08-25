@@ -1,0 +1,73 @@
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rosybrown;
+  background-image: url(girl-stock-photo.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #ff0081 -23%, #0089ff);
+  opacity: .5;
+}
+
+.wavy,
+.wavy::before,
+.wavy::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8em;
+  background-image: url('wave.png');
+  filter: drop-shadow(2px 4px 6px rosybrown);
+  background-size: contain;
+}
+
+.wavy {
+  animation: animate 5s linear infinite;
+}
+
+.wavy::before {
+  content: '';
+  opacity: .5;
+  animation: animate-reverse 5s linear infinite;
+}
+
+.wavy::after {
+  content: '';
+  opacity: .5;
+  animation: animate 5s linear infinite 1.5s;
+}
+
+
+@keyframes animate {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: 1366px;
+  }
+}
+
+@keyframes animate-reverse {
+  from {
+    background-position: 1366px;
+  }
+
+  to {
+    background-position: 0px;
+  }
+}

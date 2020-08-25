@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Scroll Progress Bar</title>
+  <link rel="stylesheet" href="t.css">
+</head>
+
+<body>
+  <div class="scroll-path">
+    <div class="scroll-bar"></div>
+  </div>
+  <main class="main">
+    <h1>Creattive scroll bar</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum sint dolore, maiores velit nulla aspernatur
+      beatae nisi molestias ducimus hic, laudantium quo ut saepe enim, similique possimus quis accusamus laboriosam quod
+      minus incidunt! Perferendis sed maxime minus eum ad commodi. Iste aliquam libero, eveniet totam nemo suscipit vel
+      voluptate veritatis ad. Quidem ipsa rem deleniti praesentium exercitationem eveniet. Repudiandae hic sequi nemo
+      tempora obcaecati placeat eveniet unde deleniti ipsa ratione inventore quas accusamus vero maxime officiis,
+      adipisci exercitationem aliquam facilis sunt dolores rem, cum dolor, molestiae quasi! Dolores cupiditate placeat
+      amet illo quidem dicta optio, hic ducimus nam, asperiores sapiente?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui quas voluptatum quasi quos, enim ducimus rerum
+      dicta esse labore accusamus voluptate dolorum? Praesentium laudantium maxime ad corporis. Eveniet ipsa facilis ea
+      pariatur tempora iure minus quis. Quidem unde consequuntur quos. Facilis vero ullam eligendi dolor nesciunt
+      exercitationem. Facilis officiis magnam laboriosam aliquid quia voluptatum, architecto delectus incidunt sed
+      maiores voluptates, pariatur distinctio repellat totam laudantium, ipsam maxime porro ea commodi. Totam
+      consequatur ratione facilis iure odit saepe necessitatibus exercitationem, quibusdam molestiae quidem suscipit
+      deserunt, maiores culpa, eaque quo ut tenetur corporis porro dicta perferendis. Quo quidem odit neque quam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui quas voluptatum quasi quos, enim ducimus rerum
+      dicta esse labore accusamus voluptate dolorum? Praesentium laudantium maxime ad corporis. Eveniet ipsa facilis ea
+      pariatur tempora iure minus quis. Quidem unde consequuntur quos. Facilis vero ullam eligendi dolor nesciunt
+      exercitationem. Facilis officiis magnam laboriosam aliquid quia voluptatum, architecto delectus incidunt sed
+      maiores voluptates, pariatur distinctio repellat totam laudantium, ipsam maxime porro ea commodi. Totam
+      consequatur ratione facilis iure odit saepe necessitatibus exercitationem, quibusdam molestiae quidem suscipit
+      deserunt, maiores culpa, eaque quo ut tenetur corporis porro dicta perferendis. Quo quidem odit neque quam!</p>
+  </main>
+  <script>
+    var totalHeight = document.body.scrollHeight - document.documentElement.clientHeight;
+    window.onscroll = function () {
+      var percent = (document.documentElement.scrollTop / totalHeight) * 100;
+      if (percent > 10) {
+        document.querySelector('.scroll-bar').style.height = percent + '%';
+      } else {
+        document.querySelector('.scroll-bar').style.height = 10 + '%';
+      }
+    }
+  </script>
+</body>
+
+</html>

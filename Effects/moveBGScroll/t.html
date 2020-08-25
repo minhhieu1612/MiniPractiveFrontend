@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move background on Scroll</title>
+  <link rel="stylesheet" href="t.css">
+</head>
+
+<body>
+  <div class="bg"></div>
+  <main class="main">
+    <h1>Move Backgorund on Scroll</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis ex exercitationem enim ad asperiores
+      recusandae, iste quaerat. Explicabo id, eos quam autem consectetur alias eius tempora minima esse expedita!</p>
+  </main>
+  <script>
+    window.onscroll = function () {
+      var scrollPos = document.documentElement.scrollTop / 2;
+      document.querySelector('.bg').style.backgroundPositionX = -scrollPos + 'px';
+    }
+  </script>
+</body>
+
+</html>

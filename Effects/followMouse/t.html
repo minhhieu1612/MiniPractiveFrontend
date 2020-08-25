@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate following mouse</title>
+  <link rel="stylesheet" href="t.css">
+</head>
+
+<body>
+  <h1 class="heading">Do not be happy to see others in trouble</h1>
+  <div class="face">
+    <div class="eyes">
+      <span class="eye"></span>
+      <span class="eye"></span>
+    </div>
+  </div>
+  <div class="face">
+    <div class="eyes">
+      <span class="eye"></span>
+      <span class="eye"></span>
+    </div>
+  </div>
+  <div class="face">
+    <div class="eyes">
+      <span class="eye"></span>
+      <span class="eye"></span>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('mousemove', eyeBall);
+    function eyeBall(event) {
+      var eye = document.querySelectorAll('.eye');
+      eye.forEach(function (item) {
+        let x = (item.getBoundingClientRect().left) + (item.clientWidth / 2);
+        let y = (item.getBoundingClientRect().top) + (item.clientHeight / 2);
+        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+        let rot = - radian * (180 / Math.PI) + 270;
+        item.style.transform = 'rotate(' + rot + 'deg)';
+      })
+    }
+  </script>
+</body>
+
+</html>

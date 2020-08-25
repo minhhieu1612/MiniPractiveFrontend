@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.sidenav {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  padding: 2em 0;
+  background: #555;
+  overflow-x: hidden;
+  transition: width .4s;
+}
+
+.sidenav a {
+  display: block;
+  color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 1.25em;
+  transition: .4s;
+}
+
+.sidenav a:hover {
+  background: #eee;
+  color: #555;
+}
+
+.openbtn {
+  padding: 0.6em 1.2em;
+  background: #333;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0px;
+  border: 0;
+  cursor: pointer;
+}
+
+.openbtn:hover {
+  background: #555;
+}
+
+.main {
+  margin-left: 0px;
+  padding: 2em;
+  transition: .4s;
+}
