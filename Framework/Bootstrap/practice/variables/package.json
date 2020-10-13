@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "scss": "node-sass --watch --recursive -o css --source-map-contents scss"
+  },
+  "name": "variables",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

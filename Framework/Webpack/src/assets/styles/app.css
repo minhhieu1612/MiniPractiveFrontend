@@ -1,0 +1,10 @@
+@import "bootstrap";
+
+.hello {
+  color: red;
+  font-weight: bold;
+}
+
+body {
+  /* background-image: url(../images/icon.png); */
+}

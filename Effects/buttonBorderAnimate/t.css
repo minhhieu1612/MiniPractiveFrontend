@@ -26,6 +26,10 @@ a.animate {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, .5);
 }
 
+a.animate:hover {
+  box-shadow: 0px 0px 12px rgba(27, 156, 252, .5);
+}
+
 a.animate::before {
   content: '';
   position: absolute;
@@ -36,6 +40,32 @@ a.animate::before {
   background: rgba(255, 255, 255, .05);
 }
 
+a.animate span:nth-child(odd)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10px;
+  left: 0;
+  right: 0;
+  background: inherit;
+  bottom: 0;
+  filter: blur(10px);
+}
+
+a.animate span:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: inherit;
+  bottom: 0;
+  filter: blur(10px);
+}
+
 a.animate span:nth-child(1) {
   position: absolute;
   top: 0;
@@ -43,6 +73,7 @@ a.animate span:nth-child(1) {
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, #182C61, #1B9CFC);
+  animation: animate1 2s linear infinite;
 }
 
 a.animate span:nth-child(2) {
@@ -51,7 +82,11 @@ a.animate span:nth-child(2) {
   right: 0;
   height: 100%;
   width: 2px;
+  background-size: 50%;
   background: linear-gradient(to bottom, #182C61, #1B9CFC);
+  background-position: 0 0px;
+  animation: animate2 4s linear infinite;
+  animation-delay: 2s;
 }
 
 a.animate span:nth-child(3) {
@@ -61,6 +96,7 @@ a.animate span:nth-child(3) {
   width: 100%;
   height: 2px;
   background: linear-gradient(to left, #182C61, #1B9CFC);
+  /* animation: animate3 1s linear infinite; */
 }
 
 a.animate span:nth-child(4) {
@@ -70,4 +106,45 @@ a.animate span:nth-child(4) {
   height: 100%;
   width: 2px;
   background: linear-gradient(to top, #182C61, #1B9CFC);
+  /* animation: animate4 10s linear infinite; */
+}
+
+@keyframes animate1 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position: 0 -150px;
+  }
+
+  100% {
+    background-position: 0 0px;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    background-position: 500px 0;
+  }
+
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    background-position: 0 500px;
+  }
+
+  100% {
+    background-position: 0 0px;
+  }
 }

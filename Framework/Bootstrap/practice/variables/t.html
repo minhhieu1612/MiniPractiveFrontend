@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Understand variable of bootstrap
+  </title>
+</head>
+
+<body>
+  <fieldset class="container-xxl shadow">
+    <legend>color variables</legend>
+    <p class="text-primary text-uppercase font-weight-bold">text-primary</p>
+    <p class="text-secondary text-uppercase font-weight-bold">text-secondary</p>
+    <p class="text-success text-uppercase font-weight-bold">text-success</p>
+    <p class="text-warning text-uppercase font-weight-bold">text-warning</p>
+    <p class="text-info text-uppercase font-weight-bold">text-info</p>
+    <p class="text-danger text-uppercase font-weight-bold">text-danger</p>
+    <p class="text-light text-uppercase font-weight-bold">text-light</p>
+    <p class="text-dark text-uppercase font-weight-bold">text-dark</p>
+  </fieldset>
+  <fieldset>
+    <legend>grid variables</legend>
+    <span class="text-info">$grid-columns: 10</span>
+    <span class="text-info">$grid-gutter-width: 20px</span>
+    <div class="row">
+      <div class="col-3">
+        <div class=" bg-info py-2 mt-2 text-center">col-3: 30%</div>
+      </div>
+      <div class="col-7">
+        <div class=" bg-info py-2 mt-2 text-center">col-7: 70%</div>
+      </div>
+      <div class="col-4">
+        <div class=" bg-info py-2 mt-2 text-center">col-4: 40%</div>
+      </div>
+      <div class="col-6">
+        <div class=" bg-info py-2 mt-2 text-center">col-6: 60%</div>
+      </div>
+      <div class="col-5">
+        <div class=" bg-info py-2 mt-2 text-center">col-5: 50%</div>
+      </div>
+      <div class="col-5">
+        <div class=" bg-info py-2 mt-2 text-center">col-5: 50%</div>
+      </div>
+    </div>
+
+    <span class="text-info">$grid-row-columns: 5</span>
+    <span class="text-info">limit number of comlumns in one row</span>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+      <div class="col">
+        <div class=" bg-info py-2 mt-2 text-center">col: auto-width</div>
+      </div>
+      <div class="col">
+        <div class=" bg-info py-2 mt-2 text-center">col: auto-width</div>
+      </div>
+      <div class="col">
+        <div class=" bg-info py-2 mt-2 text-center">col: auto-width</div>
+      </div>
+      <div class="col">
+        <div class=" bg-info py-2 mt-2 text-center">col: auto-width</div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>font variables</legend>
+    <span class="text-info">$font-size-base: 16x -> 1rem</span>
+    <span class="text-info">$h1-font-size: $font-size-base * 2.5 </span>
+    <span class="text-info">$h2-font-size: $font-size-base * 2 </span>
+    <span class="text-info">$h3-font-size: $font-size-base * 1.75 </span>
+    <span class="text-info">$h4-font-size: $font-size-base * 1.5 </span>
+    <span class="text-info">$h5-font-size: $font-size-base * 1.25 </span>
+    <span class="text-info">$h6-font-size: $font-size-base </span>
+    <h1>h1 heading</h1>
+    <h2>h2 heading</h2>
+    <h3>h3 heading</h3>
+    <h4>h4 heading</h4>
+    <h5>h5 heading</h5>
+    <h6>h6 heading</h6>
+    <p class="h1">.h1 paragraph</p>
+    <p class="h2">.h2 paragraph</p>
+    <p class="h3">.h3 paragraph</p>
+    <p class="h4">.h4 paragraph</p>
+    <p class="h5">.h5 paragraph</p>
+    <p class="h6">.h6 paragraph</p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>some tags</legend>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark>Consequuntur</mark> , illum.</p>
+    <p><del>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</del></p>
+    <p><s>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</s></p>
+    <p><ins>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</ins></p>
+    <p><u>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</u></p>
+    <p><small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</small></p>
+    <p><strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</strong></p>
+    <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, accusamus.</em></p>
+    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iure.</p>
+    <kbd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, reprehenderit.</kbd>
+    <hr>
+    <p><mark>.mark</mark> and <mark>.small</mark> classes are also available to apply the same styles as mark and small
+      tag while avoiding any unwanted semantic implications that the tags would bring.</p>
+    <abbr title="Lorem"> Lorem ipsum dolor sit amet.</abbr>
+    <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+    <pre><code>
+      &lt;p&gt;Sample text here...&lt;/p&gt;
+      &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+    </code></pre>
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </fieldset>
+
+  <fieldset>
+    <legend>list</legend>
+    <ul class="list-unstyled">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+    <ul class="list-inline">
+      <li class="list-inline-item">Lorem ipsum</li>
+      <li class="list-inline-item">Phasellus iaculis</li>
+      <li class="list-inline-item">Nulla volutpat</li>
+    </ul>
+    <dl class="row">
+      <dt class="col-sm-2">heading</dt>
+      <dd class="col-sm-8">Lorem ipsum dolor sit amet consectetur.</dd>
+      <dt class="col-sm-2">heading</dt>
+      <dd class="col-sm-8">Lorem ipsum dolor sit amet consectetur.</dd>
+
+      <dt class="col-sm-2 text-truncate">this is Truncated term is truncated</dt>
+      <dd class="col-sm-8">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+        justo sit amet risus.</dd>
+      <dt class="col-sm-2">Nesting</dt>
+      <dd class="col-sm-8">
+        <dl class="row">
+          <dt class="col-sm-3">Nested definition list</dt>
+          <dd class="col-sm-7">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+        </dl>
+      </dd>
+    </dl>
+
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote">
+          <p>Quote</p>
+          <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>Form</legend>
+    <div class="form-group">
+      <label for="">username</label>
+      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="form-group">
+      <label for="">Language</label>
+      <select multiple class="form-control" name="" id="">
+        <option>EN</option>
+        <option>VI</option>
+        <option>JP</option>
+      </select>
+    </div>
+    <label for="inputName">Input label</label>
+    <input type="text" class="form-control is-valid" name="inputName" id="inputName">
+    <div class="invalid-feedback">
+      Validation message
+    </div>
+    <!-- TODO: This is for server side, there is another version for browser defaults -->
+  </fieldset>
+
+</body>
+
+</html>

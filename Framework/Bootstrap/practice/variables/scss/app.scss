@@ -1,0 +1,211 @@
+$primary: #dd2211;
+$secondary: #7f8c8d;
+$info: #1abc9c;
+$danger: #e74c3c;
+$success: #2ecc71;
+$warning: #f39c12;
+$light: #ecf0f1;
+$dark: #2c3e50;
+$extra: #3f0494;
+$gray-600: #6c757d !default;
+$theme-colors: (
+  "extra": $extra,
+);
+
+// space for margin, padding
+$spacer: 20px;
+$spacers: (
+  6: 6 * $spacer,
+);
+
+// for w-, h-
+$sizes: (
+  30: 30%,
+  60: 60%,
+  90: 90%,
+);
+
+// breakpoint custom
+$grid-breakpoints: map-merge(
+  (
+    xxs: 0,
+    xs: 360px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1500px,
+  ),
+  ()
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 10;
+$grid-gutter-width: 10px;
+$grid-row-columns: 5;
+
+// Typography
+// font size, font weight, line-height
+
+$font-size-base: 1rem;
+
+$h1-font-size: 1rem * 2.5;
+$h2-font-size: 1rem * 2;
+$h3-font-size: 1rem * 1.75;
+$h4-font-size: 1rem * 1.5;
+$h5-font-size: 1rem * 1.25;
+$h6-font-size: 1rem;
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+$headings-margin-bottom: $spacer / 2;
+$headings-font-family: null;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+// for bigger font size
+
+$display1-size: 6rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem;
+
+$display1-weight: 300;
+$display2-weight: 300;
+$display3-weight: 300;
+$display4-weight: 300;
+$display-line-height: $headings-line-height;
+
+// another typo: lead, mark, muted, underline, ...etc text
+
+$lead-font-size: $font-size-base * 1.25;
+$lead-font-weight: 300;
+
+$small-font-size: 60%;
+
+$text-muted: rgba(0, 0, 0, 0.2);
+
+$blockquote-small-color: rgba(0, 0, 0, 0.4);
+$blockquote-small-font-size: 90%;
+$blockquote-font-size: $font-size-base * 1.25;
+
+$border-width: 1px;
+
+$kbd-box-shadow: 0 -0.1rem 5px 12px rgba(0, 0, 0, 0.25);
+
+$list-inline-padding: 1rem;
+
+$mark-padding: 0.2em 0.5em;
+$mark-bg: #a2ffa2;
+
+// horizontal rule
+$hr-border-color: rgba(0, 0, 0, 0.5);
+$hr-border-width: $border-width;
+$hr-margin-y: 15px;
+
+// Code
+
+$code-font-size: 87.5%;
+$code-color: rgb(250, 136, 28);
+
+$kbd-padding-y: 0.5rem;
+$kbd-padding-x: 1rem;
+$kbd-font-size: $code-font-size;
+$kbd-color: #0d0;
+$kbd-bg: #555;
+
+$pre-color: #555;
+$pre-scrollable-max-height: 340px;
+
+// shadow
+
+// $enable-shadows: true; // has no ideal
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  font-size: 17px;
+}
+
+body {
+  padding: calc(1rem - 0); // will invalid so choose the next one
+  padding: subtract($spacer, 0);
+  // background: theme-color-level("primary", -10); // its okay
+  // background: color-yiq(#aaa);
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $spacer;
+  padding: $spacer !important;
+  border: $border-width solid $border-color;
+}
+
+legend {
+  @extend .text-uppercase;
+  @extend .w-25;
+  @extend .h5;
+  @extend .text-center;
+  // OR
+  // @include font-size($h5-font-size);
+}
+
+@media (max-width: map-get($grid-breakpoints,"md")) {
+  body {
+    background: $primary;
+  }
+}
+
+// @debug $grid-breakpoints;
+
+// responsive font size
+
+@media (max-width: map-get($grid-breakpoints,"xxl")) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints,"xl")) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints,"md")) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints,"xs")) {
+  html {
+    font-size: 13px;
+  }
+}

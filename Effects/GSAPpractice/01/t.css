@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+[class^="item-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  height: 6em;
+  margin: 1.5em;
+  padding: 1em;
+  background: #ff7432;
+  color: #fff;
+}
+
+[class^="item-"] .icon {
+  font-size: 3em;
+}
