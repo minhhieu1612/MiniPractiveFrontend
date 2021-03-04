@@ -7,14 +7,13 @@ const { map } = require('lodash');
 
 module.exports = {
   entry: {
-    index: { import: './src/app.js', dependOn: 'shared' },
-    another: { import: './src/another.js', dependOn: 'shared' },
-    shared: 'lodash',
+    app: './src/app.js',
+    another: './src/another.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.[hash:5].bundle.js',
-    publicPath: '/'
+    publicPath: '',
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -22,6 +21,11 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),

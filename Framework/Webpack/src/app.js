@@ -1,7 +1,6 @@
 import './assets/styles/app.css';
 import Icon from './assets/images/icon.png';
 import xmlData from './assets/data/note.xml';
-import { join } from 'lodash';
 
 function component() {
   const element = document.createElement('div');
