@@ -8,4 +8,4 @@ const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath }));
 
-app.listen(3000, () => { });
+app.listen(3000);
