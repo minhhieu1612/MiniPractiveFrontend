@@ -9,7 +9,7 @@
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
     "serve": "node server.js",
-    "bt": "npm-run-all --parallel build test"
+    "bt": "npm-run-all --parallel watch serve"
   },
   "author": "",
   "license": "ISC",
